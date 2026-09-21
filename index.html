@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Application — Agentic Feature for Health Data Governance Assessment Tool</title>
+<style>
+  :root {
+    --ink: #1a2332;
+    --muted: #5b6b82;
+    --brand: #0c6b58;
+    --brand-dark: #08493d;
+    --accent: #e8f3f0;
+    --line: #dde4ec;
+    --bg: #ffffff;
+    --paper: #f7f9fb;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.6;
+  }
+  a { color: var(--brand); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  header.nav {
+    background: var(--ink);
+    color: #fff;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  header.nav .site-title { font-size: 15px; font-weight: 600; letter-spacing: .3px; }
+  header.nav nav { display: flex; gap: 6px; flex-wrap: wrap; }
+  header.nav nav a {
+    color: #cfd9e6;
+    font-size: 13.5px;
+    padding: 6px 10px;
+    border-radius: 6px;
+  }
+  header.nav nav a:hover { background: rgba(255,255,255,.08); color: #fff; text-decoration: none; }
+  header.nav nav a.active { background: var(--brand); color: #fff; }
+  main {
+    max-width: none;
+    margin: 0 auto;
+    padding: 40px 24px 72px;
+    background: var(--bg);
+    border-left: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+    min-height: calc(100vh - 100px);
+  }
+  h1 { font-size: 28px; line-height: 1.25; margin: 0 0 6px; }
+  h2 { font-size: 22px; margin: 40px 0 12px; padding-bottom: 6px; border-bottom: 2px solid var(--accent); }
+  h3 { font-size: 17px; margin: 26px 0 8px; color: var(--brand-dark); }
+  h4 { font-size: 15px; margin: 20px 0 6px; }
+  p { margin: 0 0 12px; }
+  ul, ol { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 4px; }
+  .lede { color: var(--muted); font-size: 16px; margin-bottom: 4px; }
+  .meta { color: var(--muted); font-size: 14px; }
+  .card {
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--brand);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 14px 0;
+    background: var(--paper);
+  }
+  .quote {
+    border-left: 4px solid var(--brand);
+    margin: 14px 0;
+    padding: 10px 18px;
+    background: var(--accent);
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+  }
+  .muted { color: var(--muted); }
+  code, pre {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 13px;
+  }
+  code { background: var(--accent); padding: 1px 5px; border-radius: 4px; }
+  pre {
+    background: #0f1a26;
+    color: #d6e2ee;
+    padding: 16px 18px;
+    border-radius: 8px;
+    overflow-x: auto;
+    line-height: 1.5;
+    margin: 14px 0;
+  }
+  pre code { background: none; padding: 0; color: inherit; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    vertical-align: top;
+  }
+  th { background: var(--accent); font-weight: 600; }
+  .num { text-align: right; white-space: nowrap; }
+  .total-row { background: var(--accent); font-weight: 700; }
+  .tag {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--brand-dark);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 9px;
+    border-radius: 999px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+  }
+  .toc { font-size: 15px; }
+  .checklist { list-style: none; padding-left: 0; }
+  .checklist li { padding-left: 28px; position: relative; }
+  .checklist li::before {
+    content: "☐";
+    position: absolute; left: 0; top: 0;
+    font-size: 16px; color: var(--brand);
+  }
+  footer {
+    max-width: none;
+    margin: 0 auto;
+    padding: 20px 24px 40px;
+    color: var(--muted);
+    font-size: 13px;
+    border-left: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+    background: var(--bg);
+    text-align: center;
+  }
+  @media (max-width: 640px) {
+    main, footer { padding-left: 16px; padding-right: 16px; }
+    h1 { font-size: 24px; }
+    table { font-size: 13px; }
+  }
+  @media print {
+    header.nav { display: none; }
+    body { background: #fff; }
+    main { padding-top: 12px; border: none; max-width: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <span class="site-title">Mama Tech · Transform Health Proposal</span>
+  <nav>
+    <a href="index.html" class="active">Overview</a>
+    <a href="cover-letter.html">Cover Letter</a>
+    <a href="proposal.html">Proposal &amp; Technical Approach</a>
+    <a href="work-samples.html">Work Samples</a>
+    <a href="quote.html">Quote &amp; Breakdown</a>
+  </nav>
+</header>
+
+<main>
+  <p class="lede">Consultancy application</p>
+  <h1>Agentic Feature for the Health Data Governance Legislative and Regulatory Assessment Tool</h1>
+  <p class="meta">Submitted by <strong>Naijeria Toweett / Mama Tech</strong> · Proposed fee <strong>USD 13,555</strong> · Delivery October 2026 – February 2027</p>
+
+  <div class="card">
+    <p style="margin-bottom:6px"><strong>Core approach:</strong> an evidence-grounded document extraction and structured assessment assistant that produces a draft for human verification — not a legal interpretation engine.</p>
+    <p class="muted" style="margin:0">Evidence-first extraction · mandatory verbatim citations · explicit "Not identified" state · deterministic Step 3 summary · English / French / Spanish · cost and token controls.</p>
+  </div>
+
+  <h2>Documents</h2>
+  <ul class="toc">
+    <li><a href="cover-letter.html">Cover Letter</a> — application for the consultancy, relevant experience and proposed approach.</li>
+    <li><a href="proposal.html">Brief Proposal and Technical Approach</a> — understanding of the assignment, architecture, processing workflow, hallucination safeguards, multilingual processing, cost controls, WordPress integration, testing and delivery plan.</li>
+    <li><a href="work-samples.html">Relevant Work Samples</a> — Pactly (AI-powered contract management) and AskRafikey (AI-enabled digital health product).</li>
+    <li><a href="quote.html">Proposed Quote and Breakdown</a> — USD 13,555 across five workstreams, with fee inclusions and exclusions.</li>
+  </ul>
+
+  <h2>Key facts</h2>
+  <table>
+    <tr><td style="width:220px">Consultancy fee</td><td><strong>USD 13,555</strong></td></tr>
+    <tr><td>Delivery period</td><td>October 2026 – February 2027</td></tr>
+    <tr><td>Languages supported</td><td>English, French, Spanish</td></tr>
+    <tr><td>Team</td><td>Naijeria Toweett (Lead Consultant &amp; Technical Architect) with AI/ML Fullstack Developer Linah Muhonja</td></tr>
+    <tr><td>Submission email</td><td><a href="mailto:hr@transformhealthcoalition.org">hr@transformhealthcoalition.org</a></td></tr>
+  </table>
+
+  <h2>Contact</h2>
+  <p>
+    <strong>Naijeria Toweett</strong><br />
+    Systems Architect · Fractional Product CTO · FemTech Founder<br />
+    Mama Tech · Nairobi, Kenya<br />
+    <span class="muted">
+      Email: <a href="mailto:naijeria@mamatech.co.ke">naijeria@mamatech.co.ke</a> · Phone: <a href="tel:+254721787043">+254721787043</a><br />
+      <a href="https://www.linkedin.com/in/naijeriatoweett/" target="_blank" rel="noopener">LinkedIn</a> ·
+      <a href="https://github.com/nashthecoder" target="_blank" rel="noopener">GitHub</a> ·
+      <a href="https://naijeriatoweett.com/" target="_blank" rel="noopener">Portfolio</a>
+    </span>
+  </p>
+</main>
+
+<footer>
+  © 2026 Naijeria Toweett / Mama Tech. Prepared for Transform Health — Health Data Governance Legislative and Regulatory Assessment Tool consultancy.
+</footer>
+
+</body>
+</html>

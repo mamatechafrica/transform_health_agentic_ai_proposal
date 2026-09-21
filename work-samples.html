@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Relevant Work Samples</title>
+<style>
+  :root {
+    --ink: #1a2332;
+    --muted: #5b6b82;
+    --brand: #0c6b58;
+    --brand-dark: #08493d;
+    --accent: #e8f3f0;
+    --line: #dde4ec;
+    --bg: #ffffff;
+    --paper: #f7f9fb;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.6;
+  }
+  a { color: var(--brand); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  header.nav {
+    background: var(--ink);
+    color: #fff;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  header.nav .site-title { font-size: 15px; font-weight: 600; letter-spacing: .3px; }
+  header.nav nav { display: flex; gap: 6px; flex-wrap: wrap; }
+  header.nav nav a {
+    color: #cfd9e6;
+    font-size: 13.5px;
+    padding: 6px 10px;
+    border-radius: 6px;
+  }
+  header.nav nav a:hover { background: rgba(255,255,255,.08); color: #fff; text-decoration: none; }
+  header.nav nav a.active { background: var(--brand); color: #fff; }
+  main {
+    max-width: none;
+    margin: 0 auto;
+    padding: 40px 24px 72px;
+    background: var(--bg);
+    border-left: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+    min-height: calc(100vh - 100px);
+  }
+  h1 { font-size: 28px; line-height: 1.25; margin: 0 0 6px; }
+  h2 { font-size: 22px; margin: 40px 0 12px; padding-bottom: 6px; border-bottom: 2px solid var(--accent); }
+  h3 { font-size: 17px; margin: 26px 0 8px; color: var(--brand-dark); }
+  h4 { font-size: 15px; margin: 20px 0 6px; }
+  p { margin: 0 0 12px; }
+  ul, ol { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 4px; }
+  .lede { color: var(--muted); font-size: 16px; margin-bottom: 4px; }
+  .meta { color: var(--muted); font-size: 14px; }
+  .sample {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin: 18px 0;
+    background: var(--paper);
+  }
+  .sample.primary { border-left: 4px solid var(--brand); }
+  .sample h2 { border-bottom: none; padding-bottom: 0; margin-top: 0; }
+  .sample-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    align-items: stretch;
+    margin-top: 22px;
+  }
+  .sample-grid .sample { margin: 0; display: flex; flex-direction: column; }
+  .sample-grid .sample .note { margin-top: auto; }
+  .sample-grid .sample .sample-links { flex: 1 1 auto; }
+  .sample-thumb.embed { background: linear-gradient(135deg, #1d3a4a, #2b5f6e 55%, #2a9d8f); }
+  .embed-example {
+    margin-top: 28px;
+    padding: 26px 30px 30px;
+    border-left: 4px solid var(--brand);
+  }
+  .embed-example h2 { margin: 14px 0 8px; font-size: 19px; border-bottom: none; }
+  .embed-url {
+    margin: 10px 0 14px;
+    padding: 10px 14px;
+    background: var(--accent);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .embed-url a { font-weight: 600; word-break: break-all; }
+  .sample-links { font-size: 14px; }
+  .sample-thumb {
+    display: block;
+    height: 130px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, var(--brand) 0%, #137f68 60%, #1a9a7c 100%);
+    opacity: .92;
+  }
+  .sample-thumb.pactly { background: linear-gradient(135deg, #243b53, #3a5f83 60%, #4a7aa8); }
+  .sample-thumb.rafikey { background: linear-gradient(135deg, #7b2f5a, #a03d73 60%, #c24e8c); }
+  .note {
+    border: 1px solid #eadfaa;
+    background: #fdf8e7;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 14px;
+    margin: 14px 0;
+  }
+  footer {
+    max-width: none;
+    margin: 0 auto;
+    padding: 20px 24px 40px;
+    color: var(--muted);
+    font-size: 13px;
+    border-left: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+    background: var(--bg);
+    text-align: center;
+  }
+  @media (max-width: 640px) {
+    main, footer { padding-left: 16px; padding-right: 16px; }
+    h1 { font-size: 24px; }
+  }
+  @media (max-width: 900px) {
+    .sample-grid { grid-template-columns: 1fr; }
+  }
+  @media print {
+    header.nav { display: none; }
+    body { background: #fff; }
+    main { padding-top: 12px; border: none; max-width: none; }
+    .sample { border: 1px solid var(--line); page-break-inside: avoid; }
+    .sample-thumb { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <span class="site-title">Mama Tech · Transform Health Proposal</span>
+  <nav>
+    <a href="index.html">Overview</a>
+    <a href="cover-letter.html">Cover Letter</a>
+    <a href="proposal.html">Proposal &amp; Technical Approach</a>
+    <a href="work-samples.html" class="active">Work Samples</a>
+    <a href="quote.html">Quote &amp; Breakdown</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Relevant Work Samples</h1>
+  <p class="meta">The two primary work samples submitted with this application.</p>
+
+  <div class="sample-grid">
+
+    <div class="sample primary">
+      <div class="sample-thumb pactly" aria-hidden="true"></div>
+      <h2>Work Sample 1</h2>
+      <p class="sample-links">
+        <strong>Repository:</strong> <a href="https://github.com/imbarilyn/contract_mgt_backend_v2" target="_blank" rel="noopener">github.com/imbarilyn/contract_mgt_backend_v2</a>
+      </p>
+      <p><strong>Description:</strong></p>
+      <p>
+        Pactly is an AI-powered contract management system designed to transform unstructured contracts into structured, searchable and access-controlled information.
+      </p>
+      <p>Relevant capabilities include:</p>
+      <ul>
+        <li>Secure document upload</li>
+        <li>SHA-256 duplicate detection</li>
+        <li>PDF text extraction using PyMuPDF</li>
+        <li>LLM-assisted metadata extraction</li>
+        <li>Human-in-the-loop verification</li>
+        <li>Structured metadata workflows</li>
+        <li>LangGraph workflow architecture</li>
+        <li>Embeddings and vector retrieval architecture</li>
+        <li>ChromaDB integration architecture</li>
+        <li>Background job processing</li>
+        <li>Tenant and domain-level access control</li>
+      </ul>
+      <p><strong>Relevance to this consultancy:</strong></p>
+      <p>
+        Pactly demonstrates the architecture required for document ingestion, structured extraction, human verification, retrieval and controlled AI workflows. Its central principle — AI-generated information must be reviewed before becoming authoritative — is directly relevant to Transform Health's requirement for evidence-grounded legislative assessment.
+      </p>
+      <div class="note">
+        <strong>Important qualification:</strong> Pactly is an active work-in-progress. The repository documents the full target architecture, while some components are implemented foundations and others are under development.
+      </div>
+    </div>
+
+    <div class="sample primary">
+      <div class="sample-thumb rafikey" aria-hidden="true"></div>
+      <h2>Work Sample 2</h2>
+      <p class="sample-links">
+        <strong>Repository:</strong> <a href="https://github.com/mamatechafrica/RafikeyAIChatbot" target="_blank" rel="noopener">github.com/mamatechafrica/RafikeyAIChatbot</a><br />
+        <strong>Live application:</strong> <a href="https://chat.askrafikey.com/" target="_blank" rel="noopener">chat.askrafikey.com</a>
+      </p>
+      <p><strong>Description:</strong></p>
+      <p>
+        AskRafikey is an AI-powered SRHR chatbot designed to provide accessible and youth-friendly sexual and reproductive health information.
+      </p>
+      <p>Relevant capabilities include:</p>
+      <ul>
+        <li>Production-facing health application</li>
+        <li>Responsive mobile and desktop interface</li>
+        <li>User account creation and authentication</li>
+        <li>Anonymous access</li>
+        <li>Real-time messaging</li>
+        <li>Chat history</li>
+        <li>Feedback and interaction tracking</li>
+        <li>Offline support</li>
+        <li>Push notifications</li>
+        <li>User-centred information flows</li>
+      </ul>
+      <p><strong>Relevance to this consultancy:</strong></p>
+      <p>
+        AskRafikey demonstrates the ability to translate AI-enabled functionality into an understandable interface for non-technical users. This is relevant to the required registration, upload, processing-status, error-notification and download workflows for the Health Data Governance assessment tool.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="card embed-example">
+    <div class="sample-thumb embed" aria-hidden="true"></div>
+    <h2>WordPress embedding example</h2>
+    <p style="margin-top:0">
+      The <a href="https://github.com/nashthecoder/ai-democracy-map-dev" target="_blank" rel="noopener">AIxD Threat Map</a> — a searchable AI policy and classification platform we built as a self-contained app — is embedded into the Power for Democracies research portal via an <strong>iframe</strong>:
+    </p>
+    <p class="embed-url">
+      <a href="https://www.powerfordemocracies.org/research/our-research/ai-democracy-landscape/" target="_blank" rel="noopener">powerfordemocracies.org/research/our-research/ai-democracy-landscape</a>
+    </p>
+    <p style="margin-bottom:0">
+      This demonstrates a proven pattern for embedding self-contained, data-driven tools into a <strong>WordPress</strong> site with automatic iframe height sync, theme-independent styling and no impact on the host site's performance or security. The same embedding approach can be used on the Health Data Governance website where a standalone view is needed.
+    </p>
+  </div>
+</main>
+
+<footer>
+  © 2026 Naijeria Toweett / Mama Tech. Proposal for Transform Health — Health Data Governance Legislative and Regulatory Assessment Tool consultancy.
+</footer>
+
+</body>
+</html>

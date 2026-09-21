@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Proposed Quote and Breakdown</title>
+<style>
+  :root {
+    --ink: #1a2332;
+    --muted: #5b6b82;
+    --brand: #0c6b58;
+    --brand-dark: #08493d;
+    --accent: #e8f3f0;
+    --line: #dde4ec;
+    --bg: #ffffff;
+    --paper: #f7f9fb;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.6;
+  }
+  a { color: var(--brand); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  header.nav {
+    background: var(--ink);
+    color: #fff;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  header.nav .site-title { font-size: 15px; font-weight: 600; letter-spacing: .3px; }
+  header.nav nav { display: flex; gap: 6px; flex-wrap: wrap; }
+  header.nav nav a {
+    color: #cfd9e6;
+    font-size: 13.5px;
+    padding: 6px 10px;
+    border-radius: 6px;
+  }
+  header.nav nav a:hover { background: rgba(255,255,255,.08); color: #fff; text-decoration: none; }
+  header.nav nav a.active { background: var(--brand); color: #fff; }
+  main {
+    max-width: none;
+    margin: 0 auto;
+    padding: 40px 24px 72px;
+    background: var(--bg);
+    border-left: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+    min-height: calc(100vh - 100px);
+  }
+  h1 { font-size: 28px; line-height: 1.25; margin: 0 0 6px; }
+  h2 { font-size: 22px; margin: 40px 0 12px; padding-bottom: 6px; border-bottom: 2px solid var(--accent); }
+  h3 { font-size: 17px; margin: 26px 0 8px; color: var(--brand-dark); }
+  p { margin: 0 0 12px; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 4px; }
+  .meta { color: var(--muted); font-size: 14px; }
+  .fee-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: var(--ink);
+    color: #fff;
+    border-radius: 10px;
+    padding: 22px 26px;
+    margin: 18px 0 8px;
+  }
+  .fee-hero .label { font-size: 14px; color: #aeb9c9; }
+  .fee-hero .amount { font-size: 34px; font-weight: 800; letter-spacing: .5px; color: #7fe0c7; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 12px;
+    border: 1px solid var(--line);
+    vertical-align: top;
+  }
+  th { background: var(--accent); font-weight: 600; }
+  .num { text-align: right; white-space: nowrap; font-weight: 600; }
+  .total-row td { background: var(--accent); font-weight: 700; }
+  .card {
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--brand);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 14px 0;
+    background: var(--paper);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin: 16px 0;
+  }
+  .grid .card { margin: 0; }
+  @media (max-width: 640px) {
+    main, footer { padding-left: 16px; padding-right: 16px; }
+    h1 { font-size: 24px; }
+    .grid { grid-template-columns: 1fr; }
+    table { font-size: 13px; }
+    .fee-hero .amount { font-size: 28px; }
+  }
+  footer {
+    max-width: none;
+    margin: 0 auto;
+    padding: 20px 24px 40px;
+    color: var(--muted);
+    font-size: 13px;
+    border-left: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+    background: var(--bg);
+    text-align: center;
+  }
+  @media print {
+    header.nav { display: none; }
+    body { background: #fff; }
+    main { padding-top: 12px; border: none; max-width: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <span class="site-title">Mama Tech · Transform Health Proposal</span>
+  <nav>
+    <a href="index.html">Overview</a>
+    <a href="cover-letter.html">Cover Letter</a>
+    <a href="proposal.html">Proposal &amp; Technical Approach</a>
+    <a href="work-samples.html">Work Samples</a>
+    <a href="quote.html" class="active">Quote &amp; Breakdown</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Proposed Quote and Breakdown</h1>
+
+  <div class="fee-hero">
+    <span class="label">Proposed total fee</span>
+    <span class="amount">USD 13,555</span>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width:24%">Workstream</th>
+        <th>Key activities</th>
+        <th style="width:14%" class="num">Fee</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1. Orientation and technical design</td>
+        <td>Review existing tool, worksheets, WordPress environment, hosting, user workflows, consent, security, retention, cost controls and technical architecture</td>
+        <td class="num">USD 2,250</td>
+      </tr>
+      <tr>
+        <td>2. Agentic system design and development</td>
+        <td>Document parsing, retrieval, structured evidence extraction, citation validation, multilingual workflow, hallucination safeguards, deterministic summary engine and token/cost controls</td>
+        <td class="num">USD 4,555</td>
+      </tr>
+      <tr>
+        <td>3. User interface build and integration</td>
+        <td>Registration and approval flow, upload interface, job initiation, status display, failure notifications and downloads integrated with WordPress</td>
+        <td class="num">USD 2,250</td>
+      </tr>
+      <tr>
+        <td>4. Accuracy testing and UAT</td>
+        <td>Test dataset preparation, precision/recall and citation testing, hallucination review, cost/performance measurement, pilot user testing and refinements</td>
+        <td class="num">USD 2,750</td>
+      </tr>
+      <tr>
+        <td>5. Deployment, launch and handover</td>
+        <td>Production deployment, user guidance, technical documentation, maintenance recommendations, monitoring guidance and handover sessions</td>
+        <td class="num">USD 1,750</td>
+      </tr>
+      <tr class="total-row">
+        <td colspan="2">Total</td>
+        <td class="num">USD 13,555</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Fee assumptions</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>The fee includes</h3>
+      <ul>
+        <li>Technical design</li>
+        <li>Agentic workflow development</li>
+        <li>WordPress-facing interface integration</li>
+        <li>Testing and refinement</li>
+        <li>Documentation</li>
+        <li>Handover</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>The fee excludes</h3>
+      <ul>
+        <li>Model/API usage</li>
+        <li>OCR services</li>
+        <li>Cloud hosting</li>
+        <li>Email delivery services</li>
+        <li>Premium WordPress plugins</li>
+        <li>Long-term maintenance after handover</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>
+    These excluded costs would be identified and estimated during the orientation and technical design phase. Because the expected assessment volume is low, the proposed architecture would prioritise on-demand processing and configurable usage controls.
+  </p>
+
+  <div class="note" style="border-color:#bfe3d6;background:var(--accent);">
+    <strong>Note:</strong> USD 13,555 covers the deliverables; metered third-party operating costs are pass-through and will be estimated during design.
+  </div>
+</main>
+
+<footer>
+  © 2026 Naijeria Toweett / Mama Tech. Proposal for Transform Health — Health Data Governance Legislative and Regulatory Assessment Tool consultancy. Fee: USD 13,555.
+</footer>
+
+</body>
+</html>
